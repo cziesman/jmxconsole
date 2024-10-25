@@ -1,3 +1,4 @@
+
 /*
  * JBoss, Home of Professional Open Source
  * Copyright 2015, Red Hat, Inc., and individual contributors as indicated
@@ -15,29 +16,38 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.wildfly.extras.jmxconsole.util.editor;
-
-import java.beans.PropertyEditorSupport;
+package io.github.cziesman.jmxconsole.util.exception;
 
 /**
- * A property editor for byte[].
+ * Thrown to indicate that a string was empty (aka. <code>""</code>)
+ * where it must <b>not</b> be.
  *
- * @author Scott.Stark@jboss.org
- * @version $Revision$
+ * @author <a href="mailto:jason@planet57.com">Jason Dillon</a>
+ * @version <tt>$Revision$</tt>
  */
-public class ByteArrayEditor extends PropertyEditorSupport {
+public class EmptyStringException extends IllegalArgumentException {
 
     /**
-     * Map the argument text into and Byte using Byte.decode.
+     * The serialVersionUID
      */
-    public void setAsText(final String text) {
+    private static final long serialVersionUID = -7958716001355854762L;
 
-        if (PropertyEditors.isNull(text, false, false)) {
-            setValue(null);
-            return;
-        }
-        Object newValue = text.getBytes();
-        setValue(newValue);
+    /**
+     * Construct a <tt>EmptyStringException</tt>.
+     *
+     * @param msg Exception message.
+     */
+    public EmptyStringException(final String msg) {
+
+        super(msg);
+    }
+
+    /**
+     * Construct a <tt>EmptyStringException</tt>.
+     */
+    public EmptyStringException() {
+
+        super();
     }
 
 }

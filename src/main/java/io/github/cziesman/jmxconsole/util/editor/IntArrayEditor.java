@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.wildfly.extras.jmxconsole.util.editor;
+package io.github.cziesman.jmxconsole.util.editor;
 
 import java.beans.PropertyEditorSupport;
 import java.util.StringTokenizer;

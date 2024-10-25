@@ -1,4 +1,3 @@
-
 /*
  * JBoss, Home of Professional Open Source
  * Copyright 2015, Red Hat, Inc., and individual contributors as indicated
@@ -16,36 +15,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.wildfly.extras.jmxconsole.util.exception;
+package io.github.cziesman.jmxconsole.util.exception;
 
 /**
- * Thrown to indicate that a string was empty (aka. <code>""</code>)
- * where it must <b>not</b> be.
+ * Thrown to indicate that section of code that should never have been
+ * reachable, has just been reached.
  *
  * @author <a href="mailto:jason@planet57.com">Jason Dillon</a>
  * @version <tt>$Revision$</tt>
  */
-public class EmptyStringException extends IllegalArgumentException {
+public class UnreachableStatementException
+        extends RuntimeException {
 
     /**
      * The serialVersionUID
      */
-    private static final long serialVersionUID = -7958716001355854762L;
+    private static final long serialVersionUID = -6741968131968754812L;
 
     /**
-     * Construct a <tt>EmptyStringException</tt>.
+     * Construct a <tt>UnreachableStatementException</tt> with a detail message.
      *
-     * @param msg Exception message.
+     * @param msg Detail message.
      */
-    public EmptyStringException(final String msg) {
+    public UnreachableStatementException(final String msg) {
 
         super(msg);
     }
 
     /**
-     * Construct a <tt>EmptyStringException</tt>.
+     * Construct a <tt>UnreachableStatementException</tt> with no detail.
      */
-    public EmptyStringException() {
+    public UnreachableStatementException() {
 
         super();
     }

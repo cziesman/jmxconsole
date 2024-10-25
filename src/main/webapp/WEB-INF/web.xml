@@ -7,7 +7,7 @@
 
     <servlet>
         <servlet-name>HtmlAdaptor</servlet-name>
-        <servlet-class>org.wildfly.extras.jmxconsole.html.HtmlAdaptorServlet</servlet-class>
+        <servlet-class>io.github.cziesman.jmxconsole.html.HtmlAdaptorServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>DisplayMBeans</servlet-name>

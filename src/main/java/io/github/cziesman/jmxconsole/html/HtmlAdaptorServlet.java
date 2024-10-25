@@ -19,7 +19,7 @@
  * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
  */
-package org.wildfly.extras.jmxconsole.html;
+package io.github.cziesman.jmxconsole.html;
 
 import java.io.IOException;
 import java.net.URLDecoder;
@@ -42,10 +42,10 @@ import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.wildfly.extras.jmxconsole.control.OpResultInfo;
-import org.wildfly.extras.jmxconsole.control.Server;
-import org.wildfly.extras.jmxconsole.model.DomainData;
-import org.wildfly.extras.jmxconsole.model.MBeanData;
+import io.github.cziesman.jmxconsole.control.OpResultInfo;
+import io.github.cziesman.jmxconsole.control.Server;
+import io.github.cziesman.jmxconsole.model.DomainData;
+import io.github.cziesman.jmxconsole.model.MBeanData;
 
 /**
  * The HTML jmxconsole controller servlet.

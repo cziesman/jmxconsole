@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <%@page contentType="text/html" import="java.io.IOException,java.net.InetAddress,java.net.URLDecoder,java.net.URLEncoder" %>
 <%@ page import="java.util.Iterator" %>
-<%@ page import="org.wildfly.extras.jmxconsole.model.DomainData" %>
-<%@ page import="org.wildfly.extras.jmxconsole.model.MBeanData" %>
+<%@ page import="io.github.cziesman.jmxconsole.model.DomainData" %>
+<%@ page import="io.github.cziesman.jmxconsole.model.MBeanData" %>
 <%!
 
     /**

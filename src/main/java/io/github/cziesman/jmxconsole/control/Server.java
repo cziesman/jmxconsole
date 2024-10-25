@@ -19,7 +19,7 @@
  * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
  */
-package org.wildfly.extras.jmxconsole.control;
+package io.github.cziesman.jmxconsole.control;
 
 import java.beans.IntrospectionException;
 import java.beans.PropertyEditor;
@@ -46,10 +46,10 @@ import javax.management.ReflectionException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.wildfly.extras.jmxconsole.model.DomainData;
-import org.wildfly.extras.jmxconsole.model.MBeanData;
-import org.wildfly.extras.jmxconsole.util.Classes;
-import org.wildfly.extras.jmxconsole.util.editor.PropertyEditors;
+import io.github.cziesman.jmxconsole.model.DomainData;
+import io.github.cziesman.jmxconsole.model.MBeanData;
+import io.github.cziesman.jmxconsole.util.Classes;
+import io.github.cziesman.jmxconsole.util.editor.PropertyEditors;
 
 /**
  * Utility methods related to the MBeanServer interface

@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.wildfly.extras.jmxconsole.util;
+package io.github.cziesman.jmxconsole.util;
 
 import java.lang.reflect.Array;
 import java.lang.reflect.Method;
@@ -34,11 +34,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.wildfly.extras.jmxconsole.util.exception.EmptyStringException;
-import org.wildfly.extras.jmxconsole.util.exception.NestedRuntimeException;
-import org.wildfly.extras.jmxconsole.util.exception.NullArgumentException;
-import org.wildfly.extras.jmxconsole.util.exception.ThrowableHandler;
-import org.wildfly.extras.jmxconsole.util.exception.UnreachableStatementException;
+import io.github.cziesman.jmxconsole.util.exception.EmptyStringException;
+import io.github.cziesman.jmxconsole.util.exception.NestedRuntimeException;
+import io.github.cziesman.jmxconsole.util.exception.NullArgumentException;
+import io.github.cziesman.jmxconsole.util.exception.ThrowableHandler;
+import io.github.cziesman.jmxconsole.util.exception.UnreachableStatementException;
 
 /**
  * A collection of <code>Class</code> utilities.

@@ -3,7 +3,7 @@
         import="java.beans.PropertyEditor,
                 java.io.IOException,
                 java.net.InetAddress,
-                org.wildfly.extras.jmxconsole.util.editor.PropertyEditors"
+                io.github.cziesman.jmxconsole.util.editor.PropertyEditors"
         %>
 <%
     String hostname = "";
@@ -24,8 +24,8 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     <meta http-equiv="cache-control" content="no-cache"/>
 </head>
 
-<jsp:useBean id='opResultInfo' class='org.wildfly.extras.jmxconsole.control.OpResultInfo'
-             type='org.wildfly.extras.jmxconsole.control.OpResultInfo' scope='request'/>
+<jsp:useBean id='opResultInfo' class='io.github.cziesman.jmxconsole.control.OpResultInfo'
+             type='io.github.cziesman.jmxconsole.control.OpResultInfo' scope='request'/>
 <%
     if (opResultInfo.name == null) {
 %>

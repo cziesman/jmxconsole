@@ -15,29 +15,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.wildfly.extras.jmxconsole.util.editor;
+package io.github.cziesman.jmxconsole.util.editor;
 
 import java.beans.PropertyEditorSupport;
 
 /**
- * A property editor for {@link java.lang.Character}.
+ * A property editor for byte[].
  *
- * @author adrian@jboss.org
+ * @author Scott.Stark@jboss.org
  * @version $Revision$
- * @todo REVIEW: look at possibly parsing escape sequences?
  */
-public class CharacterEditor extends PropertyEditorSupport {
+public class ByteArrayEditor extends PropertyEditorSupport {
 
+    /**
+     * Map the argument text into and Byte using Byte.decode.
+     */
     public void setAsText(final String text) {
 
-        if (PropertyEditors.isNull(text)) {
+        if (PropertyEditors.isNull(text, false, false)) {
             setValue(null);
             return;
         }
-        if (text.length() != 1) {
-            throw new IllegalArgumentException("Too many (" + text.length() + ") characters: '" + text + "'");
-        }
-        Object newValue = text.charAt(0);
+        Object newValue = text.getBytes();
         setValue(newValue);
     }
 

@@ -19,52 +19,34 @@
  * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
  */
-package org.wildfly.extras.jmxconsole.control;
-
-import java.beans.PropertyEditor;
+package io.github.cziesman.jmxconsole.control;
 
 /**
- * A simple tuple of an mbean operation name, signature and result.
+ * A simple tuple of an mbean operation name, index, signature, args and operation result.
  *
  * @author Scott.Stark@jboss.org
  * @author Dimitris.Andreadis@jboss.org
  */
-public class AttrResultInfo {
+public class OpResultInfo {
 
     public String name;
 
-    public PropertyEditor editor;
+    public String[] signature;
+
+    public String[] args;
 
     public Object result;
 
-    public Throwable throwable;
+    public OpResultInfo() {
 
-    public AttrResultInfo(String name, PropertyEditor editor, Object result, Throwable throwable) {
-
-        this.name = name;
-        this.editor = editor;
-        this.result = result;
-        this.throwable = throwable;
     }
 
-    public String getAsText() {
+    public OpResultInfo(String name, String[] signature, String[] args, Object result) {
 
-        if (throwable != null) {
-            return throwable.toString();
-        }
-        if (result != null) {
-            try {
-                if (editor != null) {
-                    editor.setValue(result);
-                    return editor.getAsText();
-                } else {
-                    return result.toString();
-                }
-            } catch (Exception e) {
-                return "String representation of " + name + "unavailable";
-            } // end of try-catch
-        }
-        return null;
+        this.name = name;
+        this.signature = signature;
+        this.args = args;
+        this.result = result;
     }
 
 }

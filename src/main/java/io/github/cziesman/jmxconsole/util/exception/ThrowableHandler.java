@@ -16,7 +16,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.wildfly.extras.jmxconsole.util.exception;
+package io.github.cziesman.jmxconsole.util.exception;
 
 import java.util.ArrayList;
 import java.util.Collections;

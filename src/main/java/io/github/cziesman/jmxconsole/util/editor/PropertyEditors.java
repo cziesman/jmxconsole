@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.wildfly.extras.jmxconsole.util.editor;
+package io.github.cziesman.jmxconsole.util.editor;
 
 import java.beans.BeanInfo;
 import java.beans.IntrospectionException;
@@ -32,7 +32,7 @@ import java.util.Properties;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.wildfly.extras.jmxconsole.util.Classes;
+import io.github.cziesman.jmxconsole.util.Classes;
 
 /**
  * A collection of PropertyEditor utilities. Provides the same interface

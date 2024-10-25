@@ -19,9 +19,9 @@
 <%@ page import="javax.management.modelmbean.ModelMBeanOperationInfo" %>
 <%@ page import="org.dom4j.io.HTMLWriter" %>
 <%@ page import="org.dom4j.tree.FlyweightCDATA" %>
-<%@ page import="org.wildfly.extras.jmxconsole.control.AttrResultInfo" %>
-<%@ page import="org.wildfly.extras.jmxconsole.control.Server" %>
-<%@ page import="org.wildfly.extras.jmxconsole.util.editor.PropertyEditors" %>
+<%@ page import="io.github.cziesman.jmxconsole.control.AttrResultInfo" %>
+<%@ page import="io.github.cziesman.jmxconsole.control.Server" %>
+<%@ page import="io.github.cziesman.jmxconsole.util.editor.PropertyEditors" %>
 
 <%
     String hostname = "";
@@ -112,7 +112,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     <meta http-equiv="cache-control" content="no-cache"/>
 </head>
 
-<jsp:useBean id='mbeanData' class='org.wildfly.extras.jmxconsole.model.MBeanData' scope='request'/>
+<jsp:useBean id='mbeanData' class='io.github.cziesman.jmxconsole.model.MBeanData' scope='request'/>
 <%
     if (mbeanData.getObjectName() == null) {
 %>
