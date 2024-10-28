@@ -130,6 +130,8 @@
                             <goal>sign</goal>
                         </goals>
                         <configuration>
+                            <keyname>7EF112EAE9A638FFCBF836344FA8106D03662AF1</keyname>
+                            <passphraseServerId>7EF112EAE9A638FFCBF836344FA8106D03662AF1</passphraseServerId>
                             <gpgArguments>
                                 <arg>--pinentry-mode</arg>
                                 <arg>loopback</arg>
